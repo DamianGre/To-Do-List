@@ -49,12 +49,13 @@ try
                     }
                     if (taskNumber == 1)
                     {
-                        Console.WriteLine("List is empty!");
+                        Console.WriteLine("List is empty!\n");
+                    }else{
+                        Console.Write("Remove: ");
+                        int taskToRemove = Convert.ToInt32(Console.ReadLine());
+                        listToDo.RemoveAt(taskToRemove - 1);
                     }
-                    Console.Write("Remove: ");
-                    int taskToRemove = Convert.ToInt32(Console.ReadLine());
-                    listToDo.RemoveAt(taskToRemove - 1);
-                }; break;
+                    }; break;
             case "4": Console.WriteLine("App is closed."); ; break;
             default: Console.WriteLine("Wrong data!"); break;
         }
